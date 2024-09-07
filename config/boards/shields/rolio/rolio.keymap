@@ -43,7 +43,7 @@
             label = "TAP_DANCE_0";
             #binding-cells = <0>;
             tapping-term-ms = <300>;
-            bindings = <&mo FKEYS>, <&tog FKEYS>, <&tog KB_CONFIG>;
+            bindings = <&mo NUMBERS>, <&tog MATHS>, <&tog NUMBERS>;
         };
         // Toggle Numbers layer
         td1: tap_dance_1 {
@@ -58,32 +58,32 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_2";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LSHFT>, <&caps_word>;
+            tapping-term-ms = <300>;
+            bindings = <&mo NUMBERS>, <&tog MATHS>, <&tog NUMBERS>;
         };
         // Toggle capsword right
         td3: tap_dance_3 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_3";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp RSHFT>, <&caps_word>;
+            tapping-term-ms = <300>;
+            bindings = <&mo NUMBERS>, <&tog MATHS>, <&tog NUMBERS>;
         };
         // Toggle Windows layer
         td4: tap_dance_4 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_4";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LGUI>, <&tog WINDOWS>;
+            tapping-term-ms = <300>;
+            bindings = <&mo NUMBERS>, <&tog MATHS>, <&tog NUMBERS>;
         };
         // Toggle Windows layer
         td5: tap_dance_5 {
             compatible = "zmk,behavior-tap-dance";
             label = "TAP_DANCE_5";
             #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp RGUI>, <&tog WINDOWS>;
+            tapping-term-ms = <300>;
+            bindings = <&mo NUMBERS>, <&tog MATHS>, <&tog NUMBERS>;
         };
         // Backspace a whole word when holding backspace
         backspace_word: backspace_word {
