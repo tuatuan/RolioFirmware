@@ -40,7 +40,7 @@
 //          |         |          |           |          |        +-----------+    +-----------|       |       |           |         |          |           //
     &kp LCTRL   &kp Z     &kp X      &kp C       &kp V    &kp B    &kp C_MUTE       &kp C_PP    &kp N   &kp M   &kp COMMA   &kp DOT    &kp FSLH     &kp LALT
 //--------------------|          |           |          |        |           |    |           |       |       |           |--------------------------------//  
-                        &kp UP      &kp DOWN   &kp LGUI  &kp SPACE     &td2        &kp LSHFT     &td1    &td3    &kp  LEFT    &kp RIGHT
+                        &kp UP      &kp DOWN   &kp LGUI  &kp SPACE     &mo 2        &kp LSHFT     &mo 1    &mo 3    &kp  LEFT    &kp RIGHT
 //                    +----------|-----------|----------|--------|-----------+    +-----------|-------|--------|-----------|---------+                      //
             >;
         };
