@@ -326,7 +326,7 @@
 //          |              |              |              |              |                |                        |          |          |          |          |          |           // 
     &trans     &kp PLUS        &kp MINUS  &kp KP_MULTIPLY  &kp SLASH     &kp EQUAL                               &kp LPAR  &kp RPAR   &kp LBRC   &kp RBRC &kp DOUBLE_QUOTES  &kp GRAVE
 //          |              |              |              |              |                +--------+     +---------|          |          |          |          |          |           // 
-    &trans         &trans        &trans         &trans        &trans          &trans          &trans     &trans    &kp LBKT  &kp RBKT    &kp LT    &kp GT       &kp PIPE     &kp UNDERSCORE
+    &trans         &trans        &trans         &trans        &trans          &trans          &kp C_VOLUME_UP     &kp C_BRIGHTNESS_INC    &kp LBKT  &kp RBKT    &kp LT    &kp GT       &kp PIPE     &kp UNDERSCORE
 //-------------------------|              |              |              |                |        |     |         |          |          |          |          |----------------------//
                                &trans          &trans         &trans      &trans            &trans         &trans     &trans     &trans     &trans     &trans
 //                         +--------------|--------------|--------------|----------------|--------+     +----------|---------|----------|----------|----------+                      //
