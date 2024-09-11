@@ -11,10 +11,10 @@
 #include <dt-bindings/zmk/backlight.h>
 
 
-#define MACOS     0
+#define MACOS     3
 #define FKEYS     1
 #define NUMBERS   2
-#define WINDOWS   3
+#define WINDOWS   0
 #define W_FKEYS   4
 #define W_NUMBERS 5
 #define MATHS     6
@@ -52,6 +52,22 @@
             #binding-cells = <0>;
             tapping-term-ms = <300>;
             bindings = <&mo NUMBERS>, <&tog MATHS>, <&tog NUMBERS>;
+        };
+        // Toggle capsword left
+        td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_2";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LSHFT>, <&caps_word>;
+        };
+        // Toggle capsword right
+        td3: tap_dance_3 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAP_DANCE_3";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp RSHFT>, <&caps_word>;
         };
         // Toggle Windows layer
         td4: tap_dance_4 {
@@ -283,7 +299,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        Mac default_layer {
             label = "Mac OS";
             sensor-bindings = <&inc_dec_kp UP DOWN &inc_dec_kp LEFT RIGHT>;
             bindings = <
@@ -341,13 +357,13 @@
             bindings = <
 //-----------------------------------------------------------------+                        +------------------------------------------------------------------//
 //          |          |          |          |          |          |                        |          |          |          |          |          |           // 
-   &kp TAB       &kp F1        &kp F2        &kp F3           &kp F4       &kp F5                          &kp CARET    &kp HOME       &kp UP    &kp END    &kp RPAR       &kp BSPC
-//          |          |                |                 |          |           |                      |           |               |          |          |               |          // 
-    &trans     &kp F6        &kp F7        &kp F8             &kp F9     &kp F10                           &kp MINUS    &kp LEFT      &kp DOWN   &kp RIGHT  &kp SINGLE_QUOTE  &kp GRAVE
-//          |          |                |                 |          |           +--------+     +-------|           |               |                     |               |          // 
-    &trans     &out OUT_USB  &out OUT_BLE   &none             &none         &none    &none        &none    &kp UNDER  &kp C_PREV      &kp C_PP    &kp C_NEXT  &kp PIPE        &kp TILDE
-//---------------------|                |                 |          |           |        |    |                    |               |          |          |--------------------------//
-                            &trans            &trans         &trans     &trans     &trans        &trans    &trans       &trans         &trans     &trans
+      &kp ESC   &kp Q     &kp W      &kp E        &kp R    &kp T                                &kp Y   &kp U     &kp I      &kp O     &kp P     &kp BACKSPACE
+//          |         |          |           |          |        |                            |       |       |           |         |          |           //
+  &kp LSHFT     &kp A     &kp S      &kp D        &kp F    &kp G                                &kp H   &kp J     &kp K      &kp L    &kp SEMI    &kp ENTER
+//          |         |          |           |          |        +-----------+    +-----------|       |       |           |         |          |           //
+    &kp LCTRL   &kp Z     &kp X      &kp C       &kp V    &kp B    &kp C_MUTE       &kp C_PP    &kp N   &kp M   &kp COMMA   &kp DOT    &kp FSLH   &kp LALT
+//--------------------|          |           |          |        |           |    |           |       |       |           |--------------------------------//  
+                        &kp UP      &kp DOWN   &kp LGUI  &kp SPACE     &mo 2        &kp RSHFT   &mo 1   &mo 3    &kp  LEFT    &kp RIGHT
 //                     +----------|----------|----------|----------|--------+     +----------|---------|----------|----------|----------+                      //
             >;
         };
