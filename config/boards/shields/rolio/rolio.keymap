@@ -20,181 +20,23 @@
 #define MATHS     6
 #define KB_CONFIG 7
 
+/ {
+    chosen {
+        zmk,matrix_transform = &default_transform;
 
-    macros {
-        unindent: unindent {
-            label = "UNINDENT";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LSHIFT>
-                , <&macro_tap &kp TAB>
-                , <&macro_release &kp LSHIFT>
-                ;
-        };
-        lstart: lstart {
-            label = "Line_Start";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp LEFT>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        lend: lend {
-            label = "Line_End";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp RIGHT>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        scrsh: scrsh {
-            label = "Screenshot";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_press &kp LSHIFT>
-                , <&macro_tap &kp N3>
-                , <&macro_release &kp LSHFT>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        scrcr: scrcr {
-            label = "Screen_Crop";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_press &kp LSHIFT>
-                , <&macro_tap &kp N4>
-                , <&macro_release &kp LSHFT>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        wscrcr: wscrcr {
-            label = "Windows_Screen_Crop";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_press &kp LSHIFT>
-                , <&macro_tap &kp S>
-                , <&macro_release &kp LSHFT>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        pal: pal {
-            label = "Pallette";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_press &kp LCTRL>
-                , <&macro_tap &kp SPACE>
-                , <&macro_release &kp LCTRL>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        wpal: wpal {
-            label = "W_Pallette";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp DOT>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        // Word backspace macros
-        bsp_word: bsp_word {
-            label = "BSP_WORD";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LALT>
-                , <&macro_tap &kp BSPC>
-                , <&macro_release &kp LALT>
-                ;
-        };
-        w_bsp_word: w_bsp_word {
-            label = "W_BSP_WORD";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp BSPC>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
-        // Zoom macros
-        zoom_in: zoom_in {
-            label = "ZOOM_IN";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp EQUAL>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        zoom_out: zoom_out {
-            label = "ZOOM_OUT";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp MINUS>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        reset_zoom: reset_zoom {
-            label = "RESET_ZOOM";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LGUI>
-                , <&macro_tap &kp N0>
-                , <&macro_release &kp LGUI>
-                ;
-        };
-        w_zoom_in: w_zoom_in {
-            label = "WINDOWS_ZOOM_IN";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp EQUAL>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
-        w_zoom_out: w_zoom_out {
-            label = "WINDOWS_ZOOM_OUT";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp MINUS>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
-        w_reset_zoom: w_reset_zoom {
-            label = "WINDOWS_RESET_ZOOM";
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings
-                = <&macro_press &kp LCTRL>
-                , <&macro_tap &kp N0>
-                , <&macro_release &kp LCTRL>
-                ;
-        };
-
+        // zmk,matrix_transform = &five_column_transform;
     };
+};
 
+/ {
+    behaviors {
+        td0: td0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD0";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
