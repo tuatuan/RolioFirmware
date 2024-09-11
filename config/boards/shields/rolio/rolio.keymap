@@ -307,11 +307,11 @@
 //          |         |          |           |          |        |                            |       |       |           |         |          |           // 
       &kp ESC   &kp Q     &kp W      &kp E        &kp R    &kp T                                &kp Y   &kp U     &kp I      &kp O     &kp P     &kp BACKSPACE
 //          |         |          |           |          |        |                            |       |       |           |         |          |           //
-  &kp LSHFT     &kp A     &kp S      &kp D        &kp F     &kp G                               &kp H   &kp J     &kp K      &kp L    &kp SEMI    &kp ENTER
+  &kp LSHFT     &kp A     &kp S      &kp D        &kp F    &kp G                                &kp H   &kp J     &kp K      &kp L    &kp SEMI    &kp ENTER
 //          |         |          |           |          |        +-----------+    +-----------|       |       |           |         |          |           //
     &kp LCTRL   &kp Z     &kp X      &kp C       &kp V    &kp B    &kp C_MUTE       &kp C_PP    &kp N   &kp M   &kp COMMA   &kp DOT    &kp FSLH   &kp LALT
 //--------------------|          |           |          |        |           |    |           |       |       |           |--------------------------------//  
-                        &kp UP      &kp DOWN   &kp LGUI  &kp SPACE     &mo 2        &kp LSHFT   &mo 1   &mo 3    &kp  LEFT    &kp RIGHT
+                        &kp UP      &kp DOWN   &kp LGUI  &kp SPACE     &mo 2        &kp RSHFT   &mo 1   &mo 3    &kp  LEFT    &kp RIGHT
 //                    +----------|-----------|----------|--------|-----------+    +-----------|-------|--------|-----------|---------+                      //
             >;
         };
