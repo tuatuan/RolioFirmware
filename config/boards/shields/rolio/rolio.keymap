@@ -311,7 +311,7 @@
 //          |         |          |           |          |        +-----------+    +-----------|       |       |           |         |          |           //
     &kp LCTRL   &kp Z     &kp X      &kp C       &kp V    &kp B    &kp C_MUTE       &kp C_PP    &kp N   &kp M   &kp COMMA   &kp DOT    &kp FSLH   &kp LALT
 //--------------------|          |           |          |        |           |    |           |       |       |           |--------------------------------//  
-                        &kp UP      &kp DOWN   &kp LGUI  &kp SPACE     &mo 2        &kp LSHIFT   &mo 1    &mo 3    &kp RCTRL   &kp DEL
+                        &kp UP   &kp LGUI  &kp SPACE     &mo 2      &kp DOWN        &kp  LEFT    &kp RSHFT   &mo 1   &mo 3    &kp RIGHT
 //                    +----------|-----------|----------|--------|-----------+    +-----------|-------|--------|-----------|---------+                      //
             >;
         };
